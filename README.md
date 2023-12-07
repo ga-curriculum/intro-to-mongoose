@@ -1,4 +1,4 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![Intro to Mongoose](./assets/tktk-hero.png)
 
 ## About
 
