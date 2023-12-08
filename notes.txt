@@ -59,3 +59,14 @@ Introduction to Mongoose
 11. Level Up - Mongoose Middleware
   - pre and post hooks
 12. Level Up - Default value functions
+
+
+
+
+
+
+
+<aside>
+‼️ Reminder: Models, not schemas, are used to perform CRUD on a MongoDB collection.
+
+</aside>

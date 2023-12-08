@@ -16,8 +16,9 @@ tktk Write a short but descriptive summary of the content in this module.
 | ------ |:----------:|:-----:| ------ |
 | [Setup](./tktk-microlesson-01/README.md) | -- | -- | tktk skills covered |
 | [Concepts](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
-| [Schemas](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
-| [Models](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Schemas and Models](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+<!-- | [Models](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered | -->
+| [Creating a Model](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | [Create](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | [Read](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | **Total content**                                        | -- | -- |                     |
