@@ -16,16 +16,21 @@ tktk Write a short but descriptive summary of the content in this module.
 | ------ |:----------:|:-----:| ------ |
 | [Setup](./tktk-microlesson-01/README.md) | -- | -- | tktk skills covered |
 | [Concepts](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
-| [tktk Microlesson Name](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Schemas](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Models](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Create](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Read](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-01.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-02.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
+| [Update](./level-up/tktk-microlesson-01.md) | -- | -- | tktk skills covered |
+| [Delete](./level-up/tktk-microlesson-02.md) | -- | -- | tktk skills covered |
+| [Query Options](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
+| [Advanced Querying](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
+| [Middleware](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References
