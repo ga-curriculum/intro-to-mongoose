@@ -1,0 +1,59 @@
+Introduction to Mongoose
+
+1. Setup
+
+2. Concepts
+  - What is mongoose?
+    • Define ODM
+    • What an ODM accomplishes in web dev
+    • how it fits in MVC (DIAGRAM)
+  - Why use mongoose?
+    • Context of MongoDB as NoSQL database
+    • Relationship between the two
+    • Structure data + simplify db interactions
+
+3. Schemas in Mongoose 
+  - What is a schema?
+  - Benefits (data consistency, validation etc)
+  - Define a schema
+  - touch on types, required, default etc
+
+4. Models in Mongoose 
+  - What is a model
+    • Blueprint for documents
+    • Model methods
+  - How models are compiled FROM schemas
+  - How model instances correspond with docs in MongoDB
+
+5. Create
+  - `create()` method
+
+6. Read
+  - implementing `find`
+  - implementing `findById`
+  - findOne
+
+7. Level Up - Update
+  - intro concept, touch on data integrity?
+  - updating retrieved documents
+    • findById() + save() approach
+    • touch on a use case for this approach (checking authorship)
+  - findByIdAndUpdate() method
+    • breakdown params (id, update, options)
+
+8. Level Up - Delete 
+  - deleteOne, findByIdAndDelete
+  - discuss use cases
+  - return values of delete operations
+
+9. Level Up - Query Options
+  - sort, skip, limit etc
+  - pagination use case
+
+10. Level Up - Advanced Querying
+  - Query strings
+  - Logical operators in queries
+
+11. Level Up - Mongoose Middleware
+  - pre and post hooks
+12. Level Up - Default value functions
