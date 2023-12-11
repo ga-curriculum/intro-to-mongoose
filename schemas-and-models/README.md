@@ -11,7 +11,7 @@ A schema in Mongoose is a regular JavaScript object. The keys represent the prop
 Take a look at the Mongoose schema example below:
 
 ```javascript
-import mongoose from "mongoose";
+const mongoose = require('mongoose')
 
 const todoSchema = mongoose.Schema({
   text: String,
