@@ -2,94 +2,81 @@
 
 **Learning objective:** By the end of this lesson, students will be able to tktk
 
-tktk mongoose has a lot of methods for reading resources. sometimes you get a bunch, sometimes you find a specific document.
+Mongoose offers several methods for retrieving documents from a MongoDB database. Depending on the requirement, you can fetch a single document, multiple documents, or documents that match certain criteria.
 
 ## The `find()` method
 
-The `find()` method...
+The `find()` method is used to retrieve all documents (or all documents that meet certain criteria) from a collection.
 
-useful when...
+Let's take a look at an example of the `find()` method:
 
-Let's take a look at the anatomy of the `findOne` method:
-
-tktk Hunter replace with graphic:
 ```javascript
 const todos = await Todo.find({ });
 ```
 
-1. **Code Element**: Synopsis
+The `find()` method accepts a query object and returns an **array** of documents from the relevant collection. The query object can outline the search criteria for the documents we wish to return. An empty object (`{}`) indicates that there is no search critera, and all documents in the `Todo` collection should be retrieved.
+
+> 🚨 The `find()` method will always return an array, even if the array only includes a single result. 
 
 ## The `findById()` method
 
-The `findById()` method...
+The `findById()` method is used to fetch a **single document** based on its unique `_id`.
 
-useful when...
+Let's take a look at an example of the `findById` method:
 
-Let's take a look at the anatomy of the `findOne` method:
-
-tktk Hunter replace with graphic:
 ```javascript
+const id = '657743d4c3b284c0ef6fd001';
 const todo = await Todo.findById(id);
 ```
 
-1. **Code Element**: Synopsis
+The `findById` method accepts an `ObjectId` and retrieves the document with that unique identifier from the collection. If a `string` value is passed in, Mongoose will automatically convert it into a MongoDB `ObjectId`.
 
 ## The `findOne()` method
 
-The `findOne()` method...
+The `findOne()` method is useful for finding the **first document** that matches the given criteria.
 
-useful when...
+Let's take a look at an example of the `findOne` method:
 
-Let's take a look at the anatomy of the `findOne` method:
-
-tktk Hunter replace with graphic:
 ```javascript
 const todo = await Todo.findOne({ text: 'Learn JS' });
 ```
 
-1. **Code Element**: Synopsis
+The `findOne()` method accepts a query object that specifies the criteria by which to find the document. In the example above, the method will return the first `Todo` document with a `text` value of `Learn JS`.
 
-## Reading todos
+## Reading many todos
 
-For this demonstration, we'll work within `server.js`. 
+For this demonstration, we'll work within `queries.js`. 
 
 ### Building the `findTodos` function
 
-Let's build out a function to handle retrieving a list of todos:
+First let's build out a function to handle retrieving a list of todos:
 
 ```javascript
-// server.js
+// queries.js
 const findTodos = async () => {
-  const todos = await Todo.find({});
+  const todos = await Todo.find({ });
   console.log("All todos:", todos);
 };
 ```
 
-Next, call upon the function within the `run-queries` route:
+Next, call upon `findTodos` within the `runQueries` function:
 
 ```javascript
-// server.js
-app.get('/run-queries', async (req, res) => {
-  // Call upon the function:
-  await findTodos()
-  res.send('Check your VS Code terminal.');
-});
+// queries.js
+const runQueries = async () => {
+  console.log('Queries running.');
+  await findTodos();
+};
 ```
 
 > 🚨 If you haven't done so already, be sure to remove or comment out the invocation of `createTodo()`. 
 
 ## Running the `findTodos` function
 
-To run the `findTodos` function, start your server with the following command:
+To run the `findTodos` function, execute the `queries.js` file with the following command:
 
 ```bash
-nodemon
-```
-
-In your browser, navigate to `/run-queries`:
-
-```plaintext
-http://localhost:3000/run-queries
+node queries.js
 ```
 
 Check your terminal for the following output:
@@ -119,5 +106,3 @@ All todos: [
   }
 ]
 ```
-
-This output shows...
