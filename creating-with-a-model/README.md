@@ -1,10 +1,10 @@
-# ![Intro to Mongoose - Creating Resources](./assets/hero.png)
+# ![Intro to Mongoose - Creating with a Model](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will be able to add new documents to a MongoDB database using the `create()` method.
 
 ## The `create()` method
 
-Mongoose models provide various methods to perform CRUD (Create, Read, Update, Delete) operations. These methods facilitate interactions with the database, allowing for the creation, retrieval, modification, and deletion of resources.
+Mongoose models provide various methods to perform CRUD (Create, Read, Update, Delete) operations. These methods are **asynchronous**, and facilitate the creation, retrieval, modification, and deletion of documents in the database. 
  
 A model's [`create()`](https://mongoosejs.com/docs/api/model.html#Model.create()) method is used for adding new documents to the database. It's an asynchronous function that takes an object as an argument and returns the newly created document upon successful execution.
 
@@ -25,7 +25,7 @@ const todo = await Todo.create({ text: "Learn JS", isComplete: false });
 
 ## Creating a new todo
 
-For this demonstration, we'll work within `queries.js`. Our setup here differs from a typical Express app in order to focus on Mongoose.
+For this demonstration, we'll work within `queries.js`. Our setup here differs from a typical Node Express app in order to focus on Mongoose.
 
 ### Importing the model
 
@@ -55,7 +55,7 @@ const createTodo = async () => {
 
 In the `createTodo` function, we first define an object called `todoData`. It contains the the details for our new todo. We then use the `Todo` model's `create()` method to add this data as a document in the database. If the operation succeeds, the function outputs the newly created `todo` to the console.
 
-Next, call upon the function within the `runQueries` function:
+Next, call upon `createTodo` within the `runQueries` function:
 
 ```javascript
 // queries.js
@@ -67,7 +67,7 @@ const runQueries = async () => {
 
 ## Running the `createTodo` function
 
-To run the `createTodo` function, execute the `queries.js` file with the following command:
+To execute the `createTodo` function, run the `queries.js` file with the following command:
 
 ```bash
 node queries.js
