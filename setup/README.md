@@ -71,18 +71,34 @@ Again, do not use the above connection string in your application, it will not w
 
 Anytime you need to make a new app you can use this same connection string and only replace this portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also ensure it doesn't contain any special characters.
 
-## Query file
+## Add a `.gitignore`
 
-Open the contents of the directory in VS Code:
+Create a `.gitignore` file in your project's root directory:
 
 ```bash
-code .
+touch .gitignore
 ```
+
+A `.gitignore` file is useful when working with Mongoose and MongoDB, as it prevents sensitive files (like your `.env`) from being committed to GitHub. In this application, the `.env` contains our database connection string. We'll add the `.env` file to our `.gitignore` to prevent it from being committed to version control, avoiding the risk of exposing sensitive information online.
+
+Add the following to your `.gitignore` file:
+
+```plainttext
+.env
+```
+
+## Query file
 
 Create a `queries.js` file. We'll use this file to execute various Mongoose operations:
 
 ```bash
 touch queries.js
+```
+
+Open the contents of the directory in VS Code:
+
+```bash
+code .
 ```
 
 Add the following starter code to `queries.js`:
