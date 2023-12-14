@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Setup](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will be able to set up a basic Mongoose environment in a Node.js application.
 
 ## Setup
 
@@ -16,20 +16,102 @@ mkdir intro-to-mongoose
 cd intro-to-mongoose
 ```
 
-Create a server.js file. This file will hold your work for this lecture:
+Create a node project along with its `package.json` file by using this command:
 
 ```bash
-touch server.js
+npm init
 ```
 
-In the terminal, create a package.json with all of the default settings by running the following command:
+## Install `mongoose` and `dotenv` from NPM
+
+To use mongoose in our application, we'll first need to install the `mongoose` and `dotenv` packages from NPM:
 
 ```bash
-npm init -y
+npm i mongoose dotenv
 ```
 
-Finally, open the contents of the directory in VS Code:
+## Add the MongoDB Atlas connection string to your `.env` file
+
+First, create a `.env` file in your project's root directory:
+
+```bash
+touch .env
+```
+
+This file will be used to store any sensitive, secret information that application needs to run, but that we don't want to commit to GitHub. Database connection strings definitely qualify: we don't want just anybody to be able to walk into our database using this string!
+
+`.env` files are a simple list of key-value pairs defined like so:
+
+```plaintext
+SECRET_NUMBER=13
+PASSWORD=12345
+```
+
+This will allow an application to access the `SECRET_NUMBER`, and `PASSWORD` properties on a `process.env` object.
+
+You can now paste your MongoDB Atlas connection string in the app's `.env` file, assigning it to a `MONGODB_URI` environment variable. For example:
+
+```plaintext
+MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/?retryWrites=true
+```
+
+Do not use the above connection string in your application, it will not work.
+
+It is important that there are no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continous string with no spaces.
+
+This will make the connection string available in our application on the `process.env.MONGODB_URI` property.
+
+Your connection string will default to a generic unnamed database as indicated by `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. In this application that will be `todos`. You can specify the preferred database name by adding it between the `/` and the `?` in the connection string. Here's how that will look for this app: ``/todos?`. That will make the full connection string for this app look something like this:
+
+```plaintext
+MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/todos?retryWrites=true
+```
+
+Again, do not use the above connection string in your application, it will not work.
+
+Anytime you need to make a new app you can use this same connection string and only replace this portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also ensure it doesn't contain any special characters.
+
+## Query file
+
+Open the contents of the directory in VS Code:
 
 ```bash
 code .
+```
+
+Create a `queries.js` file. We'll use this file to execute various Mongoose operations:
+
+```bash
+touch queries.js
+```
+
+Add the following starter code to `queries.js`:
+
+```javascript
+/*-------------------------------- Starter Code --------------------------------*/
+
+const dotenv = require('dotenv');
+dotenv.config();
+const mongoose = require('mongoose');
+
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('Connected to MongoDB');
+    await runQueries()
+  } catch (err) {
+    console.error(err);
+  } finally {
+    await mongoose.disconnect();
+    console.log('Disconnected from MongoDB');
+    process.exit();
+  }
+};
+
+const runQueries = async () => {
+  console.log('Queries running.')
+};
+
+connect()
+/*-------------------------------- Query Functions --------------------------------*/
 ```
