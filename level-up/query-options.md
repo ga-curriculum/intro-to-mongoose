@@ -2,7 +2,7 @@
 
 **Learning objective:** By the end of this lesson, students will be able to...
 
-Mongoose offers a variety of methods for manipulating database queries. When you call upon a method like `find()`, it returns an instance of a [Query](https://mongoosejs.com/docs/api/query.html#Query()). You can then chain built-in query methods, such as `limit()`, `sort()`, or `skip()`, to refine the query's results.
+Mongoose offers a variety of options for manipulating database queries. When you call upon a method like `find()`, it returns an instance of a [Query](https://mongoosejs.com/docs/api/query.html#Query()). You can then chain built-in query methods, such as `limit()`, `sort()`, or `skip()`, to refine the query's results.
 
 Below is a list of some common methods for augmenting queries:
 

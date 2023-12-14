@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Level Up - Advanced Querying](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand advanced querying techniques in Mongoose.
+**Learning objective:** By the end of this lesson, students will understand options advanced querying techniques in Mongoose.
 
 Mongoose and MongoDB offer various tools for retrieving data based on complex criteria. These more advanced querying techniques can be useful for optimizing your applications, or implementing robust searching and filtering features.
 

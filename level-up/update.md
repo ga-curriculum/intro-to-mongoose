@@ -16,20 +16,15 @@ The approach involves two steps:
 Let's take a look at an example:
 
 ```javascript
-const updateTodo = async () => {
-  const id = '6573745144784f6dc034e1df';
-  const todo = await Todo.findById(id);
-  
-  todo.isComplete = true;
-  await todo.save();
-
-  console.log("Updated todo:", todo);
-};
+const id = '6573745144784f6dc034e1df';
+const todo = await Todo.findById(id);
+todo.isComplete = true;
+await todo.save();
 ```
 
 After retrieving the `todo` document, we update the `isComplete` property in the same way we would modify any regular JavaScript object property. Once this modification is made, the *`save()`* method is called on the `todo` instance to persist the changes to the database.
 
->  📚 The *`save()`* method is available on a Mongoose document instance (a retrieved document). When called on a document instance, it either inserts or updates the document in the database.
+> 📚 The *`save()`* method is available on a Mongoose document instance (a retrieved document). When called on a document instance, it either inserts or updates the document in the database.
 >
 
 ## Simultaneous retrieval and update
@@ -45,29 +40,26 @@ The `findByIdAndUpdate()` method accepts 3 arguments and returns a single docume
 Let's take a look at an example:
 
 ```javascript
-const updateTodo = async () => {
-  const id = '6573745144784f6dc034e1df';
-  const updatedTodo = await Todo.findByIdAndUpdate(
-    id,
-    { isComplete: true },
-    { new: true }
-  );
-  console.log("Updated todo:", updatedTodo);
-};
+const id = '6573745144784f6dc034e1df';
+const updatedTodo = await Todo.findByIdAndUpdate(
+  id,
+  { isComplete: true },
+  { new: true }
+);
 ```
 
 In this example, we are finding a specific document with the value of the `id` variable. The second argument is our **update object**, which sets the document's `isComplete` property to `true`. The third argument is an *options object* `{ new: true }`, specifying that the modified document should be returned, not the original. 
 
 ## Implementing `findByIdAndUpdate()`
 
-For this demonstration, we'll work within `server.js`. 
+For this demonstration, we'll work within `queries.js`. 
 
-### Building the `findTodos` function
+### Building the `updateTodo` function
 
 First let's build out a function to handle updating our todo:
 
 ```javascript
-// server.js
+// queries.js
 const updateTodo = async () => {
   const id = '6573745144784f6dc034e1df';
   const updatedTodo = await Todo.findByIdAndUpdate(
@@ -80,31 +72,24 @@ const updateTodo = async () => {
 
 ```
 
-Next, call upon the function within the `run-queries` route:
+Next, call upon `updateTodo` within the `runQueries` function:
 
 ```javascript
-// server.js
-app.get('/run-queries', async (req, res) => {
-  // Call upon the function:
-  await updateTodo()
-  res.send('Check your VS Code terminal.');
-});
+// queries.js
+const runQueries = async () => {
+  console.log('Queries running.');
+  await updateTodo();
+};
 ```
 
 > 🚨 If you haven't done so already, be sure to remove or comment out any previous methods being called upon. 
 
 ## Running the `updateTodo` function
 
-To run the `update` function, start your server with the following command:
+To execute the `updateTodo` function, run the `queries.js` file with the following command:
 
 ```bash
-nodemon
-```
-
-In your browser, navigate to `/run-queries`:
-
-```plaintext
-http://localhost:3000/run-queries
+node queries.js
 ```
 
 Check your terminal for the following output:

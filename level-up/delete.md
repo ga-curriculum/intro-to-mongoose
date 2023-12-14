@@ -41,14 +41,14 @@ const removedTodo= await Todo.findByIdAndDelete(id);
 
 ## Implementing `findByIdAndDelete()`
 
-For this demonstration, we'll work within `server.js`. 
+For this demonstration, we'll work within `queries.js`. 
 
 ### Building the `deleteTodo` function
 
 First let's build out a function to handle deleting our todo:
 
 ```javascript
-// server.js
+// queries.js
 const deleteTodo = async () => {
   const id = '6573745144784f6dc034e1df';
   const removedTodo = await Todo.findByIdAndDelete(id);
@@ -56,31 +56,24 @@ const deleteTodo = async () => {
 }
 ```
 
-Next, call upon the function within the `run-queries` route:
+Next, call upon `deleteTodo` within the `runQueries` function:
 
 ```javascript
-// server.js
-app.get('/run-queries', async (req, res) => {
-  // Call upon the function:
-  await deleteTodo()
-  res.send('Check your VS Code terminal.');
-});
+// queries.js
+const runQueries = async () => {
+  console.log('Queries running.');
+  await deleteTodo();
+};
 ```
 
 > 🚨 If you haven't done so already, be sure to remove or comment out any previous methods being called upon. 
 
 ## Running the `deleteTodo` function
 
-To run the `update` function, start your server with the following command:
+To execute the `deleteTodo` function, run the `queries.js` file with the following command:
 
 ```bash
-nodemon
-```
-
-In your browser, navigate to `/run-queries`:
-
-```plaintext
-http://localhost:3000/run-queries
+node queries.js
 ```
 
 Check your terminal for the following output:
