@@ -1,8 +1,8 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![Intro to Mongoose](./assets/tktk-hero.png)
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+This module introduces students to the fundamentals of Mongoose, including schemas, models, and performing CRUD operations with models.
 
 ## Prerequisites
 
@@ -11,21 +11,25 @@ tktk Write a short but descriptive summary of the content in this module.
 - tktk
 
 ## Content
-
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [tktk Microlesson Name](./tktk-microlesson-01/README.md) | -- | -- | tktk skills covered |
-| [tktk Microlesson Name](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
-| [tktk Microlesson Name](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Setup](./setup/README.md) | -- | -- |  Set up a basic Mongoose environment in a Node.js application. |
+| [Concepts](./concepts/README.md) | -- | -- | Understanding the role of Mongoose in a Node.js application. |
+| [Schemas and Models](./schemas-and-models/README.md) | -- | -- | Understanding the role of schemas and models in Mongoose. |
+| [Defining a Model](./defining-a-model/README.md) | -- | -- | Defining and exporting a Mongoose model. |
+| [Creating with a Model](./creating-with-a-model/README.md) | -- | -- | Creating documents with a Mongoose model. |
+| [Reading with a Model](./reading-with-a-model/README.md) | -- | -- | Reading documents with a Mongoose model.  |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-01.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-02.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
+| [Updating with a Model](./level-up/updating-with-a-model.md) | -- | -- | Updating documents with a Mongoose model. |
+| [Deleting with a Model](./level-up/deleting-with-a-model.md) | -- | -- | Deleting documents with a Mongoose model. |
+| [Query Options](./level-up/query-options.md) | -- | -- |  Refining database queries with query options. |
+| [Advanced Querying](./level-up/advanced-querying.md) | -- | -- |  Understanding advanced querying techniques in Mongoose. |
+| [Middleware](./level-up/middleware.md) | -- | -- | Understanding the fundamentals of Mongoose middleware. |
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References
