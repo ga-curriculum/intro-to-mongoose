@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Level Up - Middleware](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand Mongoose middleware.
+**Learning objective:** By the end of this lesson, students will understand the fundamentals of Mongoose middleware.
 
 Middleware in Mongoose are functions executed at specific stages of a document's lifecycle, allowing intervention during asynchronous operations. They enable code execution before or after database operations like `save` and `delete`, facilitating custom behaviors such as data validation, modification, or activity logging.
 

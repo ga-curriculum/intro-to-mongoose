@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Concepts](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will understand the role of Mongoose in a Node.js application.
 
 ## What is Mongoose?
 

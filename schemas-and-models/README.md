@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Schemas and Models](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to understand and define Mongoose schemas, create models using these schemas, and comprehend how these models interact with a MongoDB database.
+**Learning objective:** By the end of this lesson, students will understand the role of schemas and models in Mongoose.
 
 ## Mongoose schemas
 
