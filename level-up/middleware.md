@@ -61,13 +61,14 @@ The above middleware function uses the `pre` hook, and gets called before a `tod
 
 ## Running our middleware
 
-Let's run our new middleware function. To do so, we'll need to make use of the `createTodo()` function in `server.js`. 
+Let's run our new middleware function. To do so, we'll need to make use of the `createTodo()` function in `queries.js`. 
 
 Modify the `todoData` so that the first character of the `text` is lower case:
 
 ```javascript
 const createTodo = async () => {
   const todoData = {
+    // Update this line:
     text: "learn React",
     isComplete: false,
   };
@@ -77,27 +78,33 @@ const createTodo = async () => {
 };
 ```
 
-Make sure you are calling upon the `createTodo()` function within the `run-queries` route:
+Make sure you are calling upon `createTodo` within the `runQueries` function:
 
 ```javascript
-// server.js
-app.get('/run-queries', async (req, res) => {
-  // Call upon the function:
-  await updateTodo()
-  res.send('Check your VS Code terminal.');
-});
+// queries.js
+const runQueries = async () => {
+  console.log('Queries running.');
+  await createTodo();
+};
 ```
 
 > 🚨 If you haven't done so already, be sure to remove or comment out any previous methods being called upon. 
 
 Next, start your server with the following command:
 
+To test out our new middleware, run the `queries.js` file with the following command:
+
 ```bash
-nodemon
+node queries.js
 ```
 
-In your browser, navigate to `/run-queries`:
+Check your terminal for the following output:
 
 ```plaintext
-http://localhost:3000/run-queries
+New todo: {
+  text: 'Learn React',
+  isComplete: false,
+  _id: new ObjectId('657b25adc8146427465857d7'),
+  __v: 0
+}
 ```
