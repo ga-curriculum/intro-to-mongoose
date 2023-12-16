@@ -34,8 +34,6 @@ Mongoose provides eight built-in `schemaTypes`:
 - `mongoose.Schema.Types.Mixed`
 
 > 💡 Note that the last three types are specific to Mongoose, not standard JavaScript types.
->
-
 ## Mongoose models
 
 In Mongoose, a schema can be compiled into a model. A model acts as the primary interface for database operations through a variety of inbuilt methods. It uses the schema to ensure that new data conforms to a predefined structure. 
@@ -49,8 +47,7 @@ To create a model and validate data against a schema, we use the [*`mongoose.mod
 const Todo = mongoose.model('Todo', todoSchema);
 
 // Export the model:
-export { Todo };
+export Todo;
 ```
 
 > 📚 The *`mongoose.model`* accepts a singular name string and a schema as arguments, and returns a model. By default, Mongoose automatically names the corresponding MongoDB collection by pluralizing and converting the string to all lowercase.
->
