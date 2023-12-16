@@ -57,7 +57,7 @@ MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/?ret
 
 Do not use the above connection string in your application, it will not work.
 
-It is important that there are no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continous string with no spaces.
+It is important that there are no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continuous string with no spaces.
 
 This will make the connection string available in our application on the `process.env.MONGODB_URI` property.
 
@@ -69,7 +69,7 @@ MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/todo
 
 Again, do not use the above connection string in your application, it will not work.
 
-Anytime you need to make a new app you can use this same connection string and only replace this portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also ensure it doesn't contain any special characters.
+Anytime you need to make a new app you can use this same connection string and only replace the database name portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also ensure it doesn't contain any special characters.
 
 ## Add a `.gitignore`
 
