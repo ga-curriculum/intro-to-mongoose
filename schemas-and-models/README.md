@@ -47,7 +47,7 @@ To create a model and validate data against a schema, we use the [*`mongoose.mod
 const Todo = mongoose.model('Todo', todoSchema);
 
 // Export the model:
-export Todo;
+module.exports = Todo;
 ```
 
 > 📚 The *`mongoose.model`* accepts a singular name string and a schema as arguments, and returns a model. By default, Mongoose automatically names the corresponding MongoDB collection by pluralizing and converting the string to all lowercase.
