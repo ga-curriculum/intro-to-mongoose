@@ -14,13 +14,10 @@ touch models/todo.js
 In `models/todo.js`, we'll want to accomplish the following:
 
 1. We define a schema.
-
 2. Compile the schema into a model.
-
 3. Export the model.
 
 > 💡 Model files are always named singularly. 
->
 
 ## Define a schema
 
@@ -50,7 +47,6 @@ const Todo = mongoose.model('Todo', todoSchema);
 ```
 
 > 🚨 Reminder: Models, not schemas, are used to perform CRUD on a MongoDB collection.
->
 
 Finally, we'll export our `Todo` model, so that we can access its various model methods throughout our application:
 
