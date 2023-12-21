@@ -12,7 +12,7 @@ A model's [`create()`](https://mongoosejs.com/docs/api/model.html#Model.create()
 
 Let's take a look at the anatomy of the `create()` method:
 
-tktk Hunter replace with graphic:
+[tktk Hunter replace with graphic:]
 
 ```javascript
 const todo = await Todo.create({ text: "Learn JS", isComplete: false });
@@ -43,7 +43,7 @@ Let's build out a function to handle the creation of our new `todo`:
 ```javascript
 // queries.js
 const createTodo = async () => {
-  // Note: Data will typically arrive on the server via the `request` object:
+  // Note: Data will typically arrive on the server via the `request` object, but for this example we'll hard code some todo data in:
   const todoData = {
     text: "Learn React",
     isComplete: false,
@@ -84,7 +84,7 @@ New todo: {
 }
 ```
 
-This output shows the newly created `todo` document. It includes the properties we specified, along with an automatically generated `_id` (a unique identifier assigned by MongoDB) and `__v` (a version key used to track how many updates have been made to the document).
+This output shows the newly created `todo` document. It includes the properties we specified, along with an automatically generated `_id` (a unique identifier assigned by MongoDB, yours will be different from the above example) and `__v` (a version key used to track how many updates have been made to the document).
 
 To add more todos, modify the `todoData` in `createTodo` and execute the `queries.js` file again.
 
