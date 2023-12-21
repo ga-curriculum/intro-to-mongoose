@@ -23,7 +23,7 @@ All these types of middleware revolve around the use of special functions called
 
 - **`pre`**: Executed **before** a specified operation. Useful for modifying data before it is saved to the database.
 
-- **`post`**: Executed **after** an operation is completed. Useful for follow-up tasks after an operation has occured.
+- **`post`**: Executed **after** an operation is completed. Useful for follow-up tasks after an operation has occurred.
 
 You can visit the [Mongoose documentation on middleware](https://mongoosejs.com/docs/middleware.html) for more information.
 
@@ -46,8 +46,9 @@ const todoSchema = mongoose.Schema({
 });
 
 todoSchema.pre('save', function (next) {
-  if (this.text) {
-    this.text = this.text[0].toUpperCase() + this.text.slice(1);
+  const docToBeSaved = this
+  if (docToBeSaved.text) {
+    docToBeSaved.text = docToBeSaved.text[0].toUpperCase() + docToBeSaved.text.slice(1);
   }
   next();
 });

@@ -1,10 +1,10 @@
 # ![Intro to Mongoose - Defining A Model](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to create and export a Mongoose model.
+**Learning objective:** By the end of this lesson, students will be able to create and export a Mongoose model. 
 
 ## Getting started
 
-When working with Mongoose, it's a good practice to store model definitions in a dedicated `models` directory. Let's create that directory and a file to handle the `todos` resource:
+When working with Mongoose, it's good practice to store model definitions in a dedicated `models` directory. Let's create that directory and a file to handle the `todos` resource:
 
 ```bash
 mkdir models
@@ -33,7 +33,7 @@ Next, we'll define the following schema:
 ```javascript
 const todoSchema = mongoose.Schema({
   text: String,
-  isComplete: Boolean
+  isComplete: Boolean,
 });
 ```
 

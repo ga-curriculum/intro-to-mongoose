@@ -19,7 +19,7 @@ In addition to regex, Mongoose can utilize **MongoDB operators** for advanced qu
 
 ## Logical operators
 
-MongoDB logical operators are used to query with multiple conditions. With logical operators, we can conduct more targeted searches in the database. For example, the `$and` operator could allow us to `find()` all `todos` where the `isComplete` is true, and the `priorityLevel` is `high`.
+MongoDB logical operators are used to query with multiple conditions. With logical operators, we can conduct more targeted searches in the database. 
 
 Some commonly used logical operators include:
 

@@ -5,6 +5,7 @@
 ## Setup
 
 Open your Terminal application and navigate to your `~/code/ga/lectures` directory:
+
 ```bash
 cd ~/code/ga/lectures
 ```
@@ -38,7 +39,7 @@ First, create a `.env` file in your project's root directory:
 touch .env
 ```
 
-This file will be used to store any sensitive, secret information that application needs to run, but that we don't want to commit to GitHub. Database connection strings definitely qualify: we don't want just anybody to be able to walk into our database using this string!
+This file will be used to store any sensitive, secret information that the application needs to run, but that we don't want to commit to GitHub. Database connection strings definitely qualify: we don't want just anybody to be able to access our database using this string!
 
 `.env` files are a simple list of key-value pairs defined like so:
 
@@ -47,29 +48,27 @@ SECRET_NUMBER=13
 PASSWORD=12345
 ```
 
-This will allow an application to access the `SECRET_NUMBER`, and `PASSWORD` properties on a `process.env` object.
+This will allow an application to access the `SECRET_NUMBER` and `PASSWORD` properties on a `process.env` object.
 
-You can now paste your MongoDB Atlas connection string in the app's `.env` file, assigning it to a `MONGODB_URI` environment variable. For example:
+Paste your MongoDB Atlas connection string in the app's `.env` file, assigning it to a `MONGODB_URI` environment variable. For example:
 
 ```plaintext
 MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/?retryWrites=true
 ```
-
-Do not use the above connection string in your application, it will not work.
+> Do not use the above connection string in your application, it will not work.
 
 It is important that there are no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continuous string with no spaces.
 
 This will make the connection string available in our application on the `process.env.MONGODB_URI` property.
 
-Your connection string will default to a generic unnamed database as indicated by `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. In this application that will be `todos`. You can specify the preferred database name by adding it between the `/` and the `?` in the connection string. Here's how that will look for this app: ``/todos?`. That will make the full connection string for this app look something like this:
+Your connection string will default to a generic unnamed database, as indicated by the `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. In this application that will be `todos`. You can specify the preferred database name by adding it between the `/` and the `?` in the connection string. Here's how that will look for this app: ``/todos?`. That will make the full connection string for this app look something like this:
 
 ```plaintext
 MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/todos?retryWrites=true
 ```
+> Again, do not use the above connection string in your application, it will not work.
 
-Again, do not use the above connection string in your application, it will not work.
-
-Anytime you need to make a new app you can use this same connection string and only replace the database name portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also ensure it doesn't contain any special characters.
+Anytime you need to make a new app you can use this same connection string and replace the database name portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also, ensure it doesn't contain any special characters.
 
 ## Add a `.gitignore`
 
@@ -83,7 +82,7 @@ A `.gitignore` file is useful when working with Mongoose and MongoDB, as it prev
 
 Add the following to your `.gitignore` file:
 
-```plainttext
+```plaintext
 .env
 ```
 
@@ -111,17 +110,12 @@ dotenv.config();
 const mongoose = require('mongoose');
 
 const connect = async () => {
-  try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
     await runQueries()
-  } catch (err) {
-    console.error(err);
-  } finally {
     await mongoose.disconnect();
     console.log('Disconnected from MongoDB');
     process.exit();
-  }
 };
 
 const runQueries = async () => {

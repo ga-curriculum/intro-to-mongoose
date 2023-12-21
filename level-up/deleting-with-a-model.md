@@ -8,7 +8,7 @@ Delete operations permanently remove a record from a database. Mongoose provides
 
 ## Deleting retrieved documents
 
-One approach is to first retrieve the document, and then remove it from the database using the document instance.. This can be useful when you need to check the authorship of a resource before performing a delete operation. 
+One approach is to first retrieve the document, and then remove it from the database using the document instance. This can be useful when you need to check the authorship of a resource before performing a delete operation. 
 
 The approach involves two steps:
 
@@ -83,7 +83,6 @@ Removed todo: {
   _id: new ObjectId('6573745144784f6dc034e1df'),
   text: 'Learn JS',
   isComplete: true,
-  priorityLevel: 5,
   __v: 0
 }
 ```

@@ -18,7 +18,7 @@ MongoDB is a document-oriented database. Instead of storing data in rigid, table
 
 This is where Mongoose comes in. Mongoose is used to impose structures on MongoDB documents. It does this through the use of *schemas*, essentially blueprints for the shape of a MongoDB document. With Mongoose providing a structure for our documents, we gain several benefits:
 
-**Data Validation**: Ensures new data adheres to the shape of schema, promoting consistency within the database.
+**Data Validation**: Ensures new data adheres to the shape of a schema, promoting consistency within the database.
 
 **Type Casting**: Automatically aligns data types with the type specified within the schema.
 
