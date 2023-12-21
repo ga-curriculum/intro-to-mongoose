@@ -14,7 +14,7 @@ Let's take a look at an example of the `find()` method:
 const todos = await Todo.find({ });
 ```
 
-The `find()` method accepts a query object and returns an **array** of documents from the relevant collection. The query object can outline the search criteria for the documents we wish to return. An empty object (`{}`) indicates that there is no search critera, and all documents in the `Todo` collection should be retrieved.
+The `find()` method accepts a query object and returns an **array** of documents from the relevant collection. The query object can outline the search criteria for the documents we wish to return. An empty object (`{}`) indicates that there is no search criteria, and all documents in the `Todo` collection should be retrieved.
 
 > 🚨 The `find()` method will always return an array, even if the array only includes a single result. 
 
@@ -87,21 +87,18 @@ All todos: [
     _id: new ObjectId('6573745144784f6dc034e1df'),
     text: 'Learn JS',
     isComplete: false,
-    priorityLevel: 5,
     __v: 0
   },
   {
     _id: new ObjectId('6573745bfb58313f9376efe5'),
     text: 'Learn HTML',
     isComplete: false,
-    priorityLevel: 4,
     __v: 0
   },
   {
     _id: new ObjectId('6573746529759ca5e8f2779b'),
     text: 'Learn CSS',
     isComplete: false,
-    priorityLevel: 3,
     __v: 0
   }
 ]
