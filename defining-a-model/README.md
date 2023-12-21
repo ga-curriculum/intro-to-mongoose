@@ -34,7 +34,6 @@ Next, we'll define the following schema:
 const todoSchema = mongoose.Schema({
   text: String,
   isComplete: Boolean,
-  priorityLevel: Number,
 });
 ```
 

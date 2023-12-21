@@ -83,7 +83,6 @@ Removed todo: {
   _id: new ObjectId('6573745144784f6dc034e1df'),
   text: 'Learn JS',
   isComplete: true,
-  priorityLevel: 5,
   __v: 0
 }
 ```

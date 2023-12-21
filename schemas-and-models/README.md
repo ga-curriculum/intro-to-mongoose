@@ -16,7 +16,6 @@ const mongoose = require('mongoose')
 const todoSchema = mongoose.Schema({
   text: String,
   isComplete: Boolean,
-  priorityLevel: Number,
 });
 ```
 
