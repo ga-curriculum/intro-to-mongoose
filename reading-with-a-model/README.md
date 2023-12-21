@@ -58,6 +58,7 @@ const findTodos = async () => {
   console.log("All todos:", todos);
 };
 ```
+
 Next, call upon `findTodos` within the `runQueries` function:
 
 ```javascript
