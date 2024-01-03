@@ -15,5 +15,3 @@ This release modularizes the legacy [tktk previous lecture name] lecture and pro
 
 
 #### Removals
-
-

@@ -10,7 +10,7 @@ Mongoose is an *ODM* (Object Document Mapping library), used to bridge the gap b
 
 Below is a diagram illustrating how Mongoose fits in the full-stack development workflow:
 
-![Mongoose Workflow](Hunter: tktk)
+![Mongoose Diagram](./assets/mongoose-diagram.png)
 
 ## Why use Mongoose?
 

@@ -12,11 +12,7 @@ A model's [`create()`](https://mongoosejs.com/docs/api/model.html#Model.create()
 
 Let's take a look at the anatomy of the `create()` method:
 
-[tktk Hunter replace with graphic:]
-
-```javascript
-const todo = await Todo.create({ text: "Learn JS", isComplete: false });
-```
+![The `create()` method](./assets/create-method.png)
 
 1. **Document Returned**: The newly created document based on the schema.
 2. **Model**: The Mongoose model (`Todo`) used for the operation.
