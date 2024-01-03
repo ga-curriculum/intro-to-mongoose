@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Level Up - Middleware](./assets/hero.png)
+# ![Intro to Mongoose - Level Up - Middleware](./assets/middleware.png)
 
 **Learning objective:** By the end of this lesson, students will understand the fundamentals of Mongoose middleware.
 

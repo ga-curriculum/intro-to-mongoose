@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Defining A Model](./assets/hero.png)
+# ![Intro to Mongoose - Defining a Model](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will be able to create and export a Mongoose model. 
 

@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Level Up - Updating with a Model](./assets/hero.png)
+# ![Intro to Mongoose - Level Up - Updating with a Model](./assets/updating-with-a-model.png)
 
 **Learning objective:** By the end of this lesson, students will understand how to update resources in a MongoDB database using Mongoose.
 

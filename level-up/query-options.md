@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Level Up - Query Options](./assets/hero.png)
+# ![Intro to Mongoose - Level Up - Query Options](./assets/query-options.png)
 
 **Learning objective:** By the end of this lesson, students will be able to utilize various query options for refining database queries.
 
