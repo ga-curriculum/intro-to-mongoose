@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Level Up - Deleting with a Model](./assets/hero.png)
+# ![Intro to Mongoose - Level Up - Deleting with a Model](./assets/deleting-with-a-model.png)
 
 **Learning objective:** By the end of this lesson, students will be able to delete documents from a MongoDB database using Mongoose.
 

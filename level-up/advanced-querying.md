@@ -1,4 +1,4 @@
-# ![Intro to Mongoose - Level Up - Advanced Querying](./assets/hero.png)
+# ![Intro to Mongoose - Level Up - Advanced Querying](./assets/advanced-querying.png)
 
 **Learning objective:** By the end of this lesson, students will understand options advanced querying techniques in Mongoose.
 
