@@ -11,6 +11,7 @@ This module introduces students to the fundamentals of Mongoose, including schem
 - tktk
 
 ## Content
+
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
 | [Setup](./setup/README.md) | -- | -- |  Set up a basic Mongoose environment in a Node.js application. |
