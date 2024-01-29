@@ -14,7 +14,7 @@ This module introduces students to the fundamentals of Mongoose, including schem
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [Setup](./setup/README.md) | -- | -- |  Set up a basic Mongoose environment in a Node.js application. |
+| [Setup](./setup/README.md) | -- | -- |  Setting up the development environment |
 | [Concepts](./concepts/README.md) | -- | -- | Understanding the role of Mongoose in a Node.js application. |
 | [Schemas and Models](./schemas-and-models/README.md) | -- | -- | Understanding the role of schemas and models in Mongoose. |
 | [Defining a Model](./defining-a-model/README.md) | -- | -- | Defining and exporting a Mongoose model. |
