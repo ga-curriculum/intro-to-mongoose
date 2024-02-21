@@ -2,29 +2,28 @@
 
 ## About
 
-This module introduces students to the fundamentals of Mongoose, including schemas, models, and performing CRUD operations with models.
-
+This module is designed to take you through the core concepts and functionalities of Mongoose, an essential tool for any developer working with MongoDB in a Node.js environment. Through hands-on lessons, you'll become proficient in performing Create, Read, Update, and Delete (CRUD) operations using Mongoose models. This module is designed for learners familiar with server side javascript development who are ready to begin working with a MongoDB database.
 
 ## Content
 
 | Lesson | Skills |
 | ------ | ------ |
-| [Setup](../setup/README.md)| Set up a basic Mongoose environment in a Node.js application |
-| [Concepts](../concepts/README.md)| Understanding the role of Mongoose in a Node.js application |
-| [Schemas and Models](../schemas-and-models/README.md)| Understanding the role of schemas and models in Mongoose |
-| [Defining a Model](../defining-a-model/README.md)| Defining and exporting a Mongoose model |
-| [Creating with a Model](../creating-with-a-model/README.md)| Creating documents with a Mongoose model |
-| [Reading with a Model](../reading-with-a-model/README.md)| Reading documents with a Mongoose model |
+| [Setup](../setup/README.md) | Setting up the development environment |
+| [Concepts](../concepts/README.md) | Understand the role of Mongoose as an Object Document Mapping (ODM) library |
+| [Schemas and Models](../schemas-and-models/README.md) | Understand the role of schemas and models in Mongoose |
+| [Defining a Model](../defining-a-model/README.md) | Create and export a Mongoose model |
+| [Creating with a Model](../creating-with-a-model/README.md) | Creating documents with Mongoose's `.create()` method |
+| [Reading with a Model](../reading-with-a-model/README.md) | Read documents using `find()`, `findById()`, and `findOne()` methods |
 
 ## Level Up content
 
 | Lesson | Skills |
 | ------ | ------ |
-| [Updating with a Model](../level-up/updating-with-a-model.md)| Updating documents with a Mongoose model |
-| [Deleting with a Model](../level-up/deleting-with-a-model.md)| Deleting documents with a Mongoose model |
-| [Query Options](../level-up/query-options.md)| Refining database queries with query options |
-| [Advanced Querying](../level-up/advanced-querying.md)| Understanding advanced querying techniques in Mongoose |
-| [Middleware](../level-up/middleware.md)| Understanding the fundamentals of Mongoose middleware |
+| [Updating with a Model](../updating-with-a-model/README.md) | Update documents using `save()` and `findByIdAndUpdate()` |
+| [Deleting with a Model](../deleting-with-a-model/README.md) | Delete documents using `remove()` and `findByIdAndDelete()` |
+| [Query Options](../query-options/README.md) | Refine db queries with options like `limit()`, `sort()`,`skip()` |
+| [Advanced Querying](../advanced-querying/README.md) | Implement advanced querying techniques in Mongoose |
+| [Middleware](../middleware/README.md) | Middleware in Mongoose for custom behavior |
 
 ## References
 

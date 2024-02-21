@@ -55,11 +55,15 @@ MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/?ret
 ```
 > Do not use the above connection string in your application, it will not work.
 
-It is important that there are no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continuous string with no spaces.
+There must be no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continuous string.
 
 This will make the connection string available in our application on the `process.env.MONGODB_URI` property.
 
-Your connection string will default to a generic unnamed database, as indicated by the `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. In this application that will be `todos`. You can specify the preferred database name by adding it between the `/` and the `?` in the connection string. Here's how that will look for this app: ``/todos?`. That will make the full connection string for this app look something like this:
+Your connection string will default to a generic unnamed database, as indicated by the `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. 
+
+**In this application, that will be `todos`.**
+
+You can specify the preferred database name by adding it between the `/` and the `?` in the connection string. That will make the full connection string for this app look something like this:
 
 ```plaintext
 MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/todos?retryWrites=true

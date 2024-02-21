@@ -1,23 +1,22 @@
 # ![Intro to Mongoose - Defining a Model](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to create and export a Mongoose model. 
+**Learning objective:** By the end of this lesson, students will be able to create and export a Mongoose model.
 
 ## Getting started
 
-When working with Mongoose, it's good practice to store model definitions in a dedicated `models` directory. Let's create that directory and a file to handle the `todos` resource:
+When working with Mongoose, it's good practice to store model definitions in a dedicated `models` directory. Let's create that directory and a file for our `todos` model.
 
 ```bash
 mkdir models
 touch models/todo.js
 ```
+  > 💡 Model files are always named singularly. 
 
 In `models/todo.js`, we'll want to accomplish the following:
 
 1. We define a schema.
 2. Compile the schema into a model.
 3. Export the model.
-
-> 💡 Model files are always named singularly. 
 
 ## Define a schema
 
@@ -37,7 +36,7 @@ const todoSchema = mongoose.Schema({
 });
 ```
 
-## Compiling schemas into models
+## Compile the schema into a model
 
 Next we'll want to compile our `todoSchema` into a model:
 
@@ -46,7 +45,7 @@ Next we'll want to compile our `todoSchema` into a model:
 const Todo = mongoose.model('Todo', todoSchema);
 ```
 
-> 🚨 Reminder: Models, not schemas, are used to perform CRUD on a MongoDB collection.
+> Reminder: Models, not schemas, contain the functionality to perform CRUD on a MongoDB collection.
 
 Finally, we'll export our `Todo` model, so that we can access its various model methods throughout our application:
 
