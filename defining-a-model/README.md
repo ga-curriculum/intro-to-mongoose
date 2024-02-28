@@ -30,7 +30,7 @@ const mongoose = require('mongoose');
 Next, we'll define the following schema:
 
 ```javascript
-const todoSchema = mongoose.Schema({
+const todoSchema = new mongoose.Schema({
   text: String,
   isComplete: Boolean,
 });

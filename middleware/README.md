@@ -38,7 +38,7 @@ Update `models/todo.js` with the following:
 
 const mongoose = require('mongoose');
 
-const todoSchema = mongoose.Schema({
+const todoSchema = new mongoose.Schema({
   text: String,
   isComplete: Boolean
 });
