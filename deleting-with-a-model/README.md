@@ -1,6 +1,6 @@
 # ![Intro to Mongoose - Level Up - Deleting with a Model](./assets/deleting-with-a-model.png)
 
-**Learning objective:** By the end of this lesson, students will be able to delete documents from a MongoDB database using `remove()` and `findByIdAndDelete()` in Mongoose.
+**Learning objective:** By the end of this lesson, students will be able to delete documents from a MongoDB database using `deleteOne()` and `findByIdAndDelete()` in Mongoose.
 
 ## Deleting documents
 
@@ -13,18 +13,17 @@ One approach is to first retrieve the document, and then remove it from the data
 The approach involves two steps:
 
 1. **Retrieve the document**: Use the `findById()` method to fetch the document you want to delete.
-2. **Call upon the `remove()` method**: Once the document is retrieved, call upon its `remove()` method to delete it from the database.
+2. **Call upon the `deleteOne()` method**: Once the document is retrieved, call upon its `deleteOne()` method to delete it from the database.
 
 Let's take a look at an example:
 
 ```javascript
 const id = '6573745144784f6dc034e1df';
 const todo = await Todo.findById(id);
-await todo.remove();
+await todo.deleteOne();
 ```
 
->  📚 The *`remove()`* method is available on a Mongoose document instance (a retrieved document). It removes the document from the database and returns an object with metadata on the status of the operation.
-
+>  📚 The *[`deleteOne()`](https://mongoosejs.com/docs/api/model.html#Model.deleteOne())* method is available on a Mongoose document instance (a retrieved document). It removes the document from the database and returns an object with metadata on the status of the operation.
 
 ## Simultaneous retrieval and delete
 

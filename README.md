@@ -27,7 +27,7 @@ This module is designed to take you through the core concepts and functionalitie
 | Lesson                                                     | Video Time | Video | Skills                                                           |
 | ---------------------------------------------------------- | :--------: | :---: | ---------------------------------------------------------------- |
 | [Updating with a Model](./updating-with-a-model/README.md) |     --     |  --   | Update documents using `save()` and `findByIdAndUpdate()`        |
-| [Deleting with a Model](./deleting-with-a-model/README.md) |     --     |  --   | Delete documents using `remove()` and `findByIdAndDelete()`      |
+| [Deleting with a Model](./deleting-with-a-model/README.md) |     --     |  --   | Delete documents using `deleteOne()` and `findByIdAndDelete()`      |
 | [Query Options](./query-options/README.md)                 |     --     |  --   | Refine db queries with options like `limit()`, `sort()`,`skip()` |
 | [Advanced Querying](./advanced-querying/README.md)         |     --     |  --   | Implement advanced querying techniques in Mongoose               |
 | [Middleware](./middleware/README.md)                       |     --     |  --   | Middleware in Mongoose for custom behavior                       |
