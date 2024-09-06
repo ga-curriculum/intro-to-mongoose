@@ -21,7 +21,7 @@ Create a node project along with its `package.json` file by using this command:
 npm init -y
 ```
 
-## Install `mongoose` and `dotenv` from NPM
+## Install `mongoose` and `dotenv` from npm
 
 To use mongoose in our application, we'll first need to install the `mongoose` and `dotenv` packages from NPM:
 
@@ -53,13 +53,14 @@ Paste your MongoDB Atlas connection string in the app's `.env` file, assigning i
 ```plaintext
 MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/?retryWrites=true
 ```
-> Do not use the above connection string in your application, it will not work.
+
+> 🚨 Do not use the above connection string in your application. It will not work.
 
 There must be no spaces between `MONGODB_URI`, `=`, and your atlas connection string. It should be written as one continuous string.
 
 This will make the connection string available in our application on the `process.env.MONGODB_URI` property.
 
-Your connection string will default to a generic unnamed database, as indicated by the `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name. 
+Your connection string will default to a generic unnamed database, as indicated by the `/?` towards the end of the connection string. However, you ***must*** update this to your preferred database name.
 
 **In this application, that will be `todos`.**
 
@@ -68,9 +69,10 @@ You can specify the preferred database name by adding it between the `/` and the
 ```plaintext
 MONGODB_URI=mongodb+srv://<username>:<password>@sei-w0kys.azure.mongodb.net/todos?retryWrites=true
 ```
-> Again, do not use the above connection string in your application, it will not work.
 
-Anytime you need to make a new app you can use this same connection string and replace the database name portion of the string. Ensure the name you assign is unique to that project - for example, once we've used the name `todos` for this app, you shouldn't use it again. Also, ensure it doesn't contain any special characters.
+> 🚨 Again, do not use the above connection string in your application. It will not work.
+
+Anytime you need to make a new app you can use this same connection string and replace the database name portion of the string. Ensure the name you assign is unique to that project. For example, once we've used the name `todos` for this app, you shouldn't use it again. Also, ensure it doesn't contain any special characters.
 
 ## Add a `.gitignore`
 
@@ -106,25 +108,34 @@ code .
 Add the following starter code to `queries.js`:
 
 ```javascript
-/*-------------------------------- Starter Code --------------------------------*/
+/*------------------------------- Starter Code -------------------------------*/
 
 const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 
 const connect = async () => {
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Connected to MongoDB');
-    await runQueries()
-    await mongoose.disconnect();
-    console.log('Disconnected from MongoDB');
-    process.exit();
+  // Connect to MongoDB using the MONGODB_URI specified in our .env file.
+  await mongoose.connect(process.env.MONGODB_URI);
+  console.log('Connected to MongoDB');
+
+  // Call the runQueries function, which will eventually hold functions to work
+  // with data in our db.
+  await runQueries()
+
+  // Disconnect our app from MongoDB after our queries run.
+  await mongoose.disconnect();
+  console.log('Disconnected from MongoDB');
+
+  // Close our app, bringing us back to the command line.
+  process.exit();
 };
 
 const runQueries = async () => {
   console.log('Queries running.')
+  // The functions calls to run queries in our db will go here as we write them.
 };
 
 connect()
-/*-------------------------------- Query Functions --------------------------------*/
+/*------------------------------ Query Functions -----------------------------*/
 ```
