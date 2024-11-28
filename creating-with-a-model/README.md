@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Creating with a Model](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Creating with a Model</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to add new documents to a MongoDB database using the `create()` method in Mongoose.
 

@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Level Up - Query Options](./assets/query-options.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Query Options</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to use Mongoose's query manipulation methods to refine database operations in MongoDB.
 

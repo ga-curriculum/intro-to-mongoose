@@ -1,0 +1,81 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = ""
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = ""
+}
+
+schemasAndModels = new Template.Microlesson {
+  friendlyName = "Schemas and Models"
+  dirName = "schemas-and-models"
+  type = "Content"
+  videoUrl = ""
+}
+
+definingAModel = new Template.Microlesson {
+  friendlyName = "Defining a Model"
+  dirName = "defining-a-model"
+  type = "Content"
+  videoUrl = ""
+}
+
+creatingWithAModel = new Template.Microlesson {
+  friendlyName = "Creating with a Model"
+  dirName = "creating-with-a-model"
+  type = "Content"
+  videoUrl = ""
+}
+
+readingWithAModel = new Template.Microlesson {
+  friendlyName = "Reading with a Model"
+  dirName = "reading-with-a-model"
+  type = "Content"
+  videoUrl = ""
+}
+
+updatingWithAModel = new Template.Microlesson {
+  friendlyName = "Updating with a Model"
+  dirName = "updating-with-a-model"
+  type = "Content"
+  videoUrl = ""
+}
+
+deletingWithAModel = new Template.Microlesson {
+  friendlyName = "Deleting with a Model"
+  dirName = "deleting-with-a-model"
+  type = "Content"
+  videoUrl = ""
+}
+
+queryOptions = new Template.Microlesson {
+  friendlyName = "Query Options"
+  dirName = "query-options"
+  type = "Content"
+  videoUrl = ""
+}
+
+advancedQuerying = new Template.Microlesson {
+  friendlyName = "Advanced Querying"
+  dirName = "advanced-querying"
+  type = "Content"
+  videoUrl = ""
+}
+
+middleware = new Template.Microlesson {
+  friendlyName = "Middleware"
+  dirName = "middleware"
+  type = "Content"
+  videoUrl = ""
+}
+

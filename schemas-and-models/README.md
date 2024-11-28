@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Schemas and Models](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Schemas and Models</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to structure data using Mongoose schemas, compile these schemas into models, and utilize these models to perform CRUD operations in a MongoDB database.
 

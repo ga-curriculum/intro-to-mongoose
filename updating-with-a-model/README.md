@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Level Up - Updating with a Model](./assets/updating-with-a-model.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Updating with a Model</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to update resources in a MongoDB database the `save()` and `findByIdAndUpdate()` methods in Mongoose.
 

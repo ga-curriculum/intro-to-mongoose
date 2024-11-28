@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand the role of Mongoose as an Object Document Mapping (ODM) library bridging the gap between MongoDB and Node.js.
 

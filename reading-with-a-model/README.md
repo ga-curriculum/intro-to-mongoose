@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Reading with a Model](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Reading with a Model</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to read documents from MongoDB using the `find()`, `findById()`, and `findOne()` methods in Mongoose.
 

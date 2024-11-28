@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Level Up - Deleting with a Model](./assets/deleting-with-a-model.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Deleting with a Model</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to delete documents from a MongoDB database using `deleteOne()` and `findByIdAndDelete()` in Mongoose.
 

@@ -1,4 +1,7 @@
-# ![Intro to Mongoose - Level Up - Middleware](./assets/middleware.png)
+<h1>
+  <span class="headline">Intro to Mongoose</span>
+  <span class="subhead">Middleware</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to implement and utilize middleware in Mongoose for custom behavior during various stages of a document's lifecycle.
 
